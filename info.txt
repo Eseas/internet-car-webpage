@@ -1,0 +1,27 @@
+1. Opt locking
+Set blinking interval
+
+2. Async
+	sleep(10000);
+	
+3. Glass-box extensibility
+	@Alternative blinker
+	
+	interceptor - log'eris
+	
+4. REST
+PUT sukurti automobilá
+POST modifikuoti automobilá
+GET gauti automobilá
+
+
+Klausimai:
+Kà galima daryti gavus Opt. locking exception?
+
+Kas yra REST?
+
+Kas yra SOAP?
+
+Su maðina:
+prilituot varikliukø laidus
+iðbandyt, ar gali prie telefono hosto prisijungt.
