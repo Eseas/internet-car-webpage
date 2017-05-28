@@ -1,46 +1,19 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:o="http://omnifaces.org/ui"
-        >
+>
 <h:head/>
 <h:body>
-    <!--<h:form>-->
-        <!--<p:messages/>-->
-        <!--<p:outputLabel for="interval-input" value="Interval"/>-->
-        <!--<p:inputText id="interval-input" value="#{blinkerRestService.interval}"/>-->
-
-        <!--<p:commandButton actionListener="#{blinkerRestService.update()}"/>-->
-    <!--</h:form>-->
-    <!--<h:form>-->
-        <!--<h:outputText value="KeyUp: " />-->
-        <!--&lt;!&ndash;<p:inputText id="throttle" value="#{blinkerRestService.throttle}">&ndash;&gt;-->
-            <!--&lt;!&ndash;<p:ajax event="keyup" update="out1" />&ndash;&gt;-->
-        <!--&lt;!&ndash;</p:inputText>&ndash;&gt;-->
-        <!--&lt;!&ndash;<h:outputText id="out1" value="#{blinkerRestService.throttle}" />&ndash;&gt;-->
-
-
-        <!--<h:outputText id="out1" value="#{blinkerRestService.throttle}" />-->
-    <!--</h:form>-->
     <h:form id="form">
         <h:outputText value="#{blinkerRestService.throttle}"/>
 
         <p:growl id="growl" autoUpdate="true"/>
-        <!--<div class="knob-container ui-corner-all">-->
-            <!--<p:knob value="#{blinkerRestService.throttle}">-->
-                <!--<p:ajax listener="#{blinkerRestService.onChange}" update="form"/>-->
-            <!--</p:knob>-->
-        <!--</div>-->
-
         <h:inputText id="throttle" value="#{blinkerRestService.throttle}" style="display: none"/>
         <p:slider for="throttle" type="vertical" >
             <p:ajax event="slideEnd" process="throttle" update="form"/>
         </p:slider>
     </h:form>
-
 </h:body>
 </html>
